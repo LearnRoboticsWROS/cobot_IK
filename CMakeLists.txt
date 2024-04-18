@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   std_msgs
+  position_tracker
 )
 
 ## System dependencies are found with CMake's conventions
@@ -172,6 +173,14 @@ target_link_libraries(pick_place_test_node ${catkin_LIBRARIES})
 add_executable(pick_place_simple_node src/pick_place_simple.cpp)
 add_dependencies(pick_place_simple_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(pick_place_simple_node ${catkin_LIBRARIES})
+
+add_executable(pick_place_simple_client_node src/pick_place_simple_client.cpp)
+add_dependencies(pick_place_simple_client_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(pick_place_simple_client_node ${catkin_LIBRARIES})
+
+add_executable(pick_place_simple_client_class_node src/pick_place_simple_client_class.cpp)
+add_dependencies(pick_place_simple_client_class_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(pick_place_simple_client_class_node ${catkin_LIBRARIES})
 
 #############
 ## Install ##
