@@ -182,6 +182,18 @@ add_executable(pick_place_simple_client_class_node src/pick_place_simple_client_
 add_dependencies(pick_place_simple_client_class_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(pick_place_simple_client_class_node ${catkin_LIBRARIES})
 
+add_executable(ur5_ik_test_node src/ur5_ik_test.cpp)
+add_dependencies(ur5_ik_test_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ur5_ik_test_node ${catkin_LIBRARIES})
+
+add_executable(ur5_pick_place_node src/ur5_pick_place.cpp)
+add_dependencies(ur5_pick_place_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ur5_pick_place_node ${catkin_LIBRARIES})
+
+add_executable(ur5_pick_place_yt_node src/ur5_pick_place_yt.cpp)
+add_dependencies(ur5_pick_place_yt_node ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(ur5_pick_place_yt_node ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
